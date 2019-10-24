@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>common-frame</artifactId>
+	<packaging>jar</packaging>
+	<parent>
+		<groupId>org.jyd100.common</groupId>
+		<artifactId>common-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../common-parent/pom.xml</relativePath>
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.source.version>1.8</java.source.version>
+		<java.target.version>1.8</java.target.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+
+                    <configuration>
+                        <excludes>
+                            <exclude>*.xml</exclude>
+                            <exclude>*.property</exclude>
+                            <exclude>*.yaml</exclude>
+                        </excludes>
+                    </configuration>
+
+                </plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jyd100.common</groupId>
+			<artifactId>common-database</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jyd100.common</groupId>
+			<artifactId>common-tool</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.jyd100.common</groupId>
+		    <artifactId>common-base</artifactId>
+		    <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+	</dependencies>
+
+</project>
